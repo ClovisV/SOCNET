@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Content/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <link href="~/Content/Style.css" rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <title>Inscription : Ajout réseau</title>
+</head>
+<body>
+
+    <script>
+        // Chargement du SDK Facebook
+        (function (d, s, id)
+        {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.8&appId=560195047514718";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <div class="container">
+
+        <br /><br />
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <ul class="nav nav-tabs">
+                <li><a href="/Accueil/Accueil">Accueil</a></li>
+                <li><a href="/Connexion/Connexion"> Se connecter</a></li>
+                <li class="active"><a href="#"><span class="glyphicon glyphicon-user"></span> S'inscrire</a></li>
+            </ul>
+        </nav>
+
+
+        <br /><br />
+        <center><font size="20px"><b><label>Ajouter un réseau</label></b></font><br /></center>
+        <br />
+        <br />
+
+
+        @*<div class="list-group">
+            <div class="list-group-item disabled">
+                <span class="glyphicon glyphicon-plus"></span> Ajouter un réseau
+            </div>
+            <div class="list-group-item btn btn-block btn-social btn-facebook" style="background-color:#3B5998; text-decoration:none; text-emphasis-color:#FFFFFF;" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-facebook']);">
+                <span class="fa fa-facebook"></span> Sign in with Facebook
+            </div>
+            <a class="list-group-item btn btn-block btn-social btn-twitter" style="background-color:#55ACEE; text-decoration:none" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-twitter']);">
+                <span class="fa fa-twitter"></span> Sign in with Twitter 
+            </a>
+            <a class="list-group-item btn btn-block btn-social btn-linkedin" style="background-color:#007BB6; text-decoration:none" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-linkedin']);">
+                <span class="fa fa-linkedin"></span> Sign in with LinkedIn 
+            </a>
+            <a class="list-group-item btn btn-block btn-social btn-google" style="background-color:#DD4B39; text-decoration:none" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-google']);">
+                <span class="fa fa-google"></span> Sign in with Google
+            </a>
+        </div>*@
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h1 class="panel-title"><span class="glyphicon glyphicon-plus"></span> Ajouter réseau</h1>
+            </div>
+
+            <div class="panel-body">
+                
+                <!--<a class="btn btn-block btn-social btn-facebook" style="background-color:#3B5998; text-decoration:none;" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-facebook']);">
+                    <p style="color:white"><span class="fa fa-facebook"></span> Se connecter avec Facebook</p>
+                    </a>-->
+
+                <!--Bouton Login de Facebook-->
+                <a class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="true" scope="public_profile,email,user_friends"></a>
+
+                <a class="btn btn-block btn-social btn-twitter" style="background-color:#55ACEE; text-decoration:none">
+                    <p style="color:white"><span class="fa fa-twitter"></span> Se connecter avec Twitter</p>
+                </a>
+                <a class="btn btn-block btn-social btn-linkedin"  style="background-color:#007BB6; text-decoration:none" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-linkedin']);">
+                    <p style="color:white"><span class="fa fa-linkedin"></span> Se connecter avec LinkedIn</p>
+                </a>
+                <a class="btn btn-block btn-social btn-google" style="background-color:#DD4B39; text-decoration:none">
+                    <p style="color:white"><span class="fa fa-google"></span> Se connecter avec Google</p>
+                </a>
+            </div>
+        </div>
+
+                <br>
+
+         <div class="col-xs-offset-1 col-xs-9">
+             <a href="#"><button type="submit" class="btn btn-primary" style="width:70%"><span class="glyphicon glyphicon-saved"> Inscription</span></button></a>
+             <a href="/Inscription/Inscription"><button type="submit" class="btn btn-default" style="width:30%"><span class="glyphicon glyphicon-arrow-left"> Précédent</span></button></a>
+         </div>
+              
+        
+
+        <footer>
+            <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+                <div class="container">
+                    <center><p class="text-center">SocNet - Copyright tous droits réservés - 2017 </p></center>
+                </div>
+
+            </div>
+        </footer>
+
+    </div>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿body
+{
+    background-color: #3e83f2;
+    background-size: cover;
+    
+}
+
+.button
+{
+    margin: auto;
+    width: 80%;
+}
+
+.panel panel-info 
+{
+    margin: inherit;
+}
+
+.navbar navbar-default navbar-bottom 
+{
+    position: relative;
+}

@@ -14,6 +14,54 @@
     <title>Tableau de bord </title>
 </head>
 <body>
+
+    <script>
+
+        // Initialisation du SDK Javascript de Facebook...
+        window.fbAsyncInit = function ()
+        {
+            FB.init
+            ({
+                appId: '560195047514718',
+                cookie: true,
+                xfbml: true,
+                version: 'v2.9'
+            });
+        };
+                
+        // ‎Chargement asynchrone du SDK‎
+        (function (d, s, id)
+        {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/fr_FR/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        /*liste des paramètres de la fonction qui déclenche une boîte de dialogue            
+        FB.ui
+            ({
+                 method: 'feed',
+                 //redirect_uri: '',
+                 display: popup,
+                 // from: '',
+                 // to: '',
+                 link: 'https://www.facebook.com/facebook',
+                 //picture: '',
+                 //source: '',
+                 // name: '',
+                 caption: 'Poster sur Facebook',
+                 //description: '',
+                 // ref: ''
+             }, function (response)
+                {
+
+                }
+             );*/
+            
+    </script>
+
     <div class="container">
 
         <br /><br />
@@ -28,16 +76,40 @@
         <br />
         <br />
 
-        <center><font size="20px"><b><label>Tableau de bord</label></b></font><br /></center>
+        <center><font size="20"><b><label>Tableau de bord</label></b></font><br /></center>
 
         <br />
         <br />
-
-
-
-         
         
+        <div id="Facebook">
 
+            <div class="fb-page" data-href="https://www.facebook.com/facebook" data-width="" data-height=""
+                data-tabs="timeline, events, messages" data-hide-cover="false" data-show-facepile="true" data-hide-cta="false"
+                data-small-header="false" data-adapt-container-width="true"  >
+                    <blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore">
+                        <a href="https://www.facebook.com/facebook">Facebook</a>
+                    </blockquote>
+            </div>
+
+            <div class="fb-page" data-href="https://www.facebook.com/gameblog" data-width="" data-height=""
+                data-tabs="timeline, events, messages" data-hide-cover="false" data-show-facepile="true" data-hide-cta="false"
+                data-small-header="false" data-adapt-container-width="true">
+                <blockquote cite="https://www.facebook.com/gameblog" class="fb-xfbml-parse-ignore">
+                    <a href="https://www.facebook.com/gameblog">Gameblog</a>
+                </blockquote>
+            </div>
+            <button id="test" onclick="FB.ui({
+                                            method: 'feed',
+                                            link: 'https://developers.facebook.com/docs/',
+                                            caption: 'Documentation pour Facebook pour les développeurs',
+                                        }, function(response){});">
+                Poster la page des développeurs Facebook
+            </button>
+        </div>
+        
+        <br />
+        <br />
+  
         <footer>
             <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
                 <div class="container">
@@ -48,8 +120,6 @@
         </footer>
 
     </div>
-
-
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
